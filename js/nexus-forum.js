@@ -1,3 +1,4 @@
+// discussion section functionality
 const discussionContainerCard = async () => {
   const discussionCardsResponse = await fetch(
     "https://openapi.programming-hero.com/api/retro-forum/posts"
@@ -11,7 +12,7 @@ const discussionContainerCard = async () => {
         <div class="flex flex-col md:flex-row gap-6 rounded-3xl bg-[#F3F3F5] p-2">
                         <div>
                             <div class="avatar online">
-                                <div class="w-14 rounded-full">
+                                <div class="w-20 rounded-full">
                                     <img
                                         src="${card.image}" />
                                 </div>
@@ -57,5 +58,42 @@ const discussionContainerCard = async () => {
     discussionContainer.appendChild(discussionCard);
   });
 };
-
 discussionContainerCard();
+
+// latest posts section functionality
+const latestPostsContainerCard = async () => {
+  const latestPostsCardsResponse = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const latestPostsCards = await latestPostsCardsResponse.json();
+  const latestPostsContainer = document.getElementById("latest-posts-container");
+  latestPostsCards.forEach((card) => {
+    const latestPostsCardDiv = document.createElement('div');
+    latestPostsCardDiv.classList = `card bg-base-100 w-96 shadow-xl`;
+    latestPostsCardDiv.innerHTML = `
+    <figure class="px-10 pt-10">
+                        <img src="${card.cover_image}" alt=""
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start">
+                        <div class="flex items-center gap-3">
+                            <img src="images/calender.png" alt="">
+                            <p class="text-[rgba(18,19,45,0.60)]">${card.author.posted_date}</p>
+                        </div>
+                        <h2 class="card-title text-[#12132D] text-lg font-extrabold">${card.title}</h2>
+                        <p class="text-[rgba(18,19,45,0.60)]">${card.description}</p>
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <img class="w-20 rounded-full" src="${card.profile_image}" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-[#12132D] font-bold">${card.author.name}</h4>
+                                <p class="text-[rgba(18,19,45,0.60)] text-sm">${card.author.designation}</p>
+                            </div>
+                        </div>
+                    </div>
+    `;
+    latestPostsContainer.appendChild(latestPostsCardDiv);
+  })
+};
+latestPostsContainerCard();
