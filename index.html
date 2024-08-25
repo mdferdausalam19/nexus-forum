@@ -91,9 +91,9 @@
                         music to mindfulness. Welcome to Nexus Forum—your new digital home.</p>
                     <div
                         class="input input-bordered bg-white p-1 rounded-full flex items-center justify-between border-none  mt-8 max-w-[400px]">
-                        <input type="text" placeholder="Search here anything" class="pl-3" />
+                        <input id="search-input-field" type="text" placeholder="Search here anything" class="pl-3" />
                         <span
-                            class="badge badge-info bg-[#797DFC] text-white p-5 hover: cursor-pointer md:text-lg">Search</span>
+                            class="badge badge-info bg-[#797DFC] text-white p-5 hover: cursor-pointer md:text-lg" onclick="searchPost()">Search</span>
                     </div>
                 </div>
                 <div
@@ -138,21 +138,15 @@
                 <div class="col-span-1 rounded-3xl bg-[rgba(18,19,45,0.05)] p-5">
                     <div class="flex justify-between items-center mb-4">
                         <div>
-                            <h4>Title</h4>
+                            <h4 class="#12132D text-xl font-bold">Title</h4>
                         </div>
                         <div class="flex items-center gap-2">
                             <img src="images/mark.png" alt="">
-                            <p>Mark as read (<span>4</span>)</p>
+                            <p class="text-[rgba(18, 19, 45, 0.60)]">Mark as read (<span id="mark-as-read-count">0</span>)</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between rounded-2xl bg-white p-3 ">
-                        <div>
-                            <h3>10 Kids Unaware of Their Halloween Costume</h3>
-                        </div>
-                        <div class="flex items-center gap-1 min-w-[75px]">
-                            <img src="images/tabler-icon-eye.png" alt="">
-                            <p>1,568</p>
-                        </div>
+                    <div class="flex flex-col gap-4 rounded-2xl" id="mark-card-container">
+                        <!--  -->
                     </div>
                 </div>
             </div>
