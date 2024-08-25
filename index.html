@@ -62,7 +62,7 @@
             </div>
         </section>
         <!-- banner-section -->
-        <section>
+        <section class="mb-24">
             <div
                 class="bg-[#12132D] flex flex-col md:flex-row gap-12 justify-between p-5 md:p-10 lg:p-20 rounded-3xl bg-[url(images/bgbanner.png)] bg-no-repeat  bg-bottom object-cover">
                 <div>
@@ -74,10 +74,11 @@
                     <div
                         class="input input-bordered bg-white p-1  rounded-full flex items-center justify-between border-none  mt-8">
                         <input type="text" placeholder="Search here anything" />
-                        <span class="badge badge-info bg-[#797DFC] text-white p-5">Search</span>
+                        <span class="badge badge-info bg-[#797DFC] text-white p-5 hover: cursor-pointer">Search</span>
                     </div>
                 </div>
-                <div class="p-5 flex flex-col justify-center bg-white rounded-3xl space-y-3 text-[rgba(18,19,45,0.80)] text-xl font-medium">
+                <div
+                    class="p-5 flex flex-col justify-center bg-white rounded-3xl space-y-3 text-[rgba(18,19,45,0.80)] text-xl font-medium">
                     <div class="flex justify-between gap-10">
                         <p>Registered Users</p>
                         <p>14</p>
@@ -97,7 +98,90 @@
                 </div>
         </section>
     </header>
-    <main class="mx-auto container"></main>
+    <main class="mx-auto container w-10/12 max-w-[1170px]">
+        <!-- discussion-section -->
+        <section class="mb-24">
+            <div class="text-center space-y-6 mb-12">
+                <h1 class="text-[#12132D] text-4xl font-black">Let’s Discuss</h1>
+                <p class="text-[rgba(18,19,45,0.60)] text-lg">Yes, you can run unit tests and view the results directly
+                    within the app. <br> The integrated testing features allow for a
+                    streamlined.</p>
+            </div>
+            <!-- discussion and mark as read card container -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- discussion container -->
+                <div class="col-span-2 gap-6">
+                    <div class="flex gap-6 rounded-3xl bg-[#F3F3F5] p-7">
+                        <div>
+                            <div class="avatar online">
+                                <div class="w-14 rounded-full">
+                                    <img
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="mb-3 flex flex-col md:flex-row gap-5 text-[rgba(18,19,45,0.80)] text-sm font-medium">
+                                <p>#Music</p>
+                                <p>Author: Md. Ferdaus Alam</p>
+                            </div>
+                            <div class="mb-5 space-y-3">
+                                <h3 class="text-[#12132D] text-xl font-bold">10 Kids Unaware of Their Halloween Costume
+                                </h3>
+                                <p class="text-[rgba(18,19,45,0.80)]">It’s one thing to subject yourself to ha Halloween
+                                    costume mishap because, hey that’s your prerogative</p>
+                            </div>
+                            <div class="border-dashed border-[rgba(18,19,45,0.25)] border-b-2 mb-5"></div>
+                            <div class="flex justify-between items-center">
+                                <div
+                                    class="flex justify-center items-center flex-col md:flex-row space-x-6 text-[rgba(18,19,45,0.80)]">
+                                    <div class="flex items-center gap-2">
+                                        <img src="images/tabler-icon-message.png" alt="">
+                                        <p>560</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="images/tabler-icon-eye.png" alt="">
+                                        <p>1,568</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <img src="images/tabler-icon-clock.png" alt="">
+                                        <p>5 min</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <img src="images/email.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mark as read container -->
+                <div class="col-span-1 rounded-3xl bg-[rgba(18,19,45,0.05)] p-5">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h4>Title</h4>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="images/mark.png" alt="">
+                            <p>Mark as read (<span>4</span>)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between rounded-2xl bg-white p-3 ">
+                        <div>
+                            <h3>10 Kids Unaware of Their Halloween Costume</h3>
+                        </div>
+                        <div class="flex items-center gap-1 min-w-[75px]">
+                            <img src="images/tabler-icon-eye.png" alt="">
+                            <p>1,568</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 
     <!-- script file -->
