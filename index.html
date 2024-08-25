@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7107feeffd.js" crossorigin="anonymous"></script>
     <style>
         .font-mulish {
             font-family: "Mulish", sans-serif;
@@ -26,59 +27,77 @@
     <header class="mx-auto container w-10/12 max-w-[1170px]">
         <!-- navbar-section -->
         <section class="mt-12 mb-12">
-            <div class="flex justify-between items-center">
-                <div>
+            <div class="navbar justify-between bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Create Post</a></li>
+                            <li><a>Invite</a></li>
+                            <li><a>Flagged Posts</a></li>
+                        </ul>
+                    </div>
                     <a class="btn btn-ghost text-4xl font-black text-[#12132D]">Nexus</a>
                 </div>
-                <div class="flex items-center gap-3">
-                    <div
-                        class="border border-[rgba(3,7,18,0.10)] rounded-full p-2 bg-[rgba(18,19,45,0.03)] hidden md:flex">
-                        <a href="">
-                            <img src="images/house.png" alt="">
-                        </a>
-                    </div>
-                    <div
-                        class="border border-[rgba(3,7,18,0.10)] rounded-full p-2 bg-[rgba(18,19,45,0.03)] hidden md:flex">
-                        <a href="">
-                            <img src="images/pen.png" alt="">
-                        </a>
-                    </div>
-                    <div
-                        class="border border-[rgba(3,7,18,0.10)] rounded-full p-2 bg-[rgba(18,19,45,0.03)] hidden md:flex">
-                        <a href="">
-                            <img src="images/user-add.png" alt="">
-                        </a>
-                    </div>
-                    <div
-                        class="border border-[rgba(3,7,18,0.10)] rounded-full p-2 bg-[rgba(18,19,45,0.03)] hidden md:flex">
-                        <a href="">
-                            <img src="images/flag.png" alt="">
-                        </a>
+                <div class="flex justify-end">
+                    <div class=" hidden lg:flex">
+                        <ul class="menu menu-horizontal space-x-2 px-1">
+                            <li>
+                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full hover:">
+                                    <img src="images/house.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                    <img src="images/pen.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                    <img src="images/user-add.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                    <img src="images/flag.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div>
-                        <button class="btn bg-[#797DFC] rounded-full text-white">Sign In</button>
+                        <button class="btn bg-[#797DFC] rounded-full text-white text-lg">Sign In</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- banner-section -->
-        <section class="mb-24">
+        <section class="mb-16 md:mb-20">
             <div
-                class="bg-[#12132D] flex flex-col md:flex-row gap-12 justify-between p-5 md:p-10 lg:p-20 rounded-3xl bg-[url(images/bgbanner.png)] bg-no-repeat  bg-bottom object-cover">
+                class="bg-[#12132D] flex flex-col lg:flex-row gap-12 justify-between p-5 md:p-10 lg:p-20 rounded-3xl bg-[url(images/bgbanner.png)] bg-no-repeat  bg-bottom object-cover">
                 <div>
-                    <h1 class="text-white text-6xl font-black">Welcome to the <br> <span
+                    <h1 class="text-white text-5xl md:text-6xl font-black">Welcome to the <span
                             class="text-[#797DFC]">Nexus</span> Forum</h1>
-                    <p class="text-xl font-medium text-[rgba(255,255,255,0.80)] mt-5">Share your favorite opinion and
-                        win and
-                        wp forum coffee mug!</p>
+                    <p class="text-lg md:text-xl font-medium text-[rgba(255,255,255,0.80)] mt-5">Join a vibrant
+                        community where your voice matters. Explore, discuss, and grow with us on topics from coding to
+                        comedy,
+                        music to mindfulness. Welcome to Nexus Forum—your new digital home.</p>
                     <div
-                        class="input input-bordered bg-white p-1  rounded-full flex items-center justify-between border-none  mt-8">
-                        <input type="text" placeholder="Search here anything" />
-                        <span class="badge badge-info bg-[#797DFC] text-white p-5 hover: cursor-pointer">Search</span>
+                        class="input input-bordered bg-white p-1 rounded-full flex items-center justify-between border-none  mt-8 max-w-[400px]">
+                        <input type="text" placeholder="Search here anything" class="pl-3" />
+                        <span
+                            class="badge badge-info bg-[#797DFC] text-white p-5 hover: cursor-pointer md:text-lg">Search</span>
                     </div>
                 </div>
                 <div
-                    class="p-5 flex flex-col justify-center bg-white rounded-3xl space-y-3 text-[rgba(18,19,45,0.80)] text-xl font-medium">
+                    class="p-5 flex flex-col justify-center bg-white rounded-3xl space-y-3 text-[rgba(18,19,45,0.80)] text-lg md:text-xl font-medium">
                     <div class="flex justify-between gap-10">
                         <p>Registered Users</p>
                         <p>14</p>
@@ -100,18 +119,20 @@
     </header>
     <main class="mx-auto container w-10/12 max-w-[1170px]">
         <!-- discussion-section -->
-        <section class="mb-24">
+        <section class="mb-16 md:mb-24">
             <div class="text-center space-y-6 mb-12">
-                <h1 class="text-[#12132D] text-4xl font-black">Let’s Discuss</h1>
-                <p class="text-[rgba(18,19,45,0.60)] text-lg">Yes, you can run unit tests and view the results directly
-                    within the app. <br> The integrated testing features allow for a
-                    streamlined.</p>
+                <h1 class="text-[#12132D] text-3xl md:text-4xl font-black">Let’s Discuss</h1>
+                <p class="text-[rgba(18,19,45,0.60)] md:text-lg">Dive into the conversation! Browse through the latest
+                    posts, share your thoughts, and connect with like-minded
+                    individuals. Whether you have insights to share or questions to ask, this is the space where
+                    discussions come alive.
+                    Let’s make every conversation count.</p>
             </div>
             <!-- discussion and mark as read card container -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <!-- discussion container -->
-                <div class="col-span-2 gap-6">
-                    <div class="flex gap-6 rounded-3xl bg-[#F3F3F5] p-7">
+                <div class="col-span-2">
+                    <div class="flex flex-col md:flex-row gap-6 rounded-3xl bg-[#F3F3F5] p-7">
                         <div>
                             <div class="avatar online">
                                 <div class="w-14 rounded-full">
@@ -122,7 +143,7 @@
                         </div>
                         <div>
                             <div
-                                class="mb-3 flex flex-col md:flex-row gap-5 text-[rgba(18,19,45,0.80)] text-sm font-medium">
+                                class="mb-3 flex flex-col md:flex-row gap-4 text-[rgba(18,19,45,0.80)] text-sm font-medium">
                                 <p>#Music</p>
                                 <p>Author: Md. Ferdaus Alam</p>
                             </div>
@@ -136,7 +157,7 @@
                             <div class="flex justify-between items-center">
                                 <div
                                     class="flex justify-center items-center flex-col md:flex-row space-x-6 text-[rgba(18,19,45,0.80)]">
-                                    <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-2 ml-3">
                                         <img src="images/tabler-icon-message.png" alt="">
                                         <p>560</p>
                                     </div>
@@ -182,28 +203,28 @@
             </div>
         </section>
         <!-- join-forum-section -->
-        <section class="mb-24">
+        <section class="mb-16 md:mb-24">
             <div
-                class="flex flex-col-reverse md:flex-row justify-between items-center p-10 md:p-20 bg-[#12132D] rounded-3xl gap-10">
+                class="flex flex-col-reverse md:flex-row justify-between items-center p-8 md:p-14 bg-[#12132D] rounded-3xl gap-10 w-full">
                 <div>
                     <h2 class="text-white text-4xl font-black">Join Our Forum</h2>
-                    <p class="text-[rgba(255,255,255,0.80)] text-lg font-medium mt-4">Share your favorite opinion and
-                        win and wp forum coffee mug! Yes, you can run unit tests and view the results directly
-                        within the app.</p>
-                    <button class="btn bg-[#797DFC] border-none text-white font-bold mt-8">Registered Now</button>
+                    <p class="text-[rgba(255,255,255,0.80)] text-lg font-medium mt-4">Join our community! Sign up now to
+                        share your ideas, connect with others, and explore diverse topics. Your voice
+                        matters—make an impact today.</p>
+                    <button class="btn bg-[#797DFC] border-none text-white font-bold mt-8">Sign Up Now</button>
                 </div>
-                <div class="w-full">
+                <div class="w-1/2">
                     <img src="images/joinforum.png" alt="">
                 </div>
             </div>
         </section>
         <!-- latest-post-section -->
-        <section class="mb-24">
+        <section class="mb-16 md:mb-24">
             <div class="text-center space-y-6 mb-12">
-                <h1 class="text-[#12132D] text-4xl font-black">Latest Posts</h1>
-                <p class="text-[rgba(18,19,45,0.60)] text-lg">Yes, you can run unit tests and view the results directly
-                    within the app. <br> The integrated testing features allow for a
-                    streamlined.</p>
+                <h1 class="text-[#12132D] text-3xl md:text-4xl font-black">Latest Posts</h1>
+                <p class="text-[rgba(18,19,45,0.60)] md:text-lg">Stay updated with the freshest discussions! Check out
+                    the latest posts from our community and dive into trending topics.
+                    Don’t miss out on what’s new—your next great conversation starts here.</p>
             </div>
             <!-- latest post card container -->
             <div class="flex  flex-col items-center justify-center sm:flex-wrap lg:flex-nowrap lg:flex-row  gap-6 ">
@@ -235,7 +256,22 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="bg-[rgba(18,19,45,0.05)] p-10 md:p-16">
+        <div class="mx-auto container w-10/12 max-w-[1170px] text-center">
+            <h2 class="text-[#12132D] text-4xl font-black mb-4">Nexus</h2>
+            <p class="mb-8">Thank you for being a part of Nexus Forum. Connect, share, and grow with us every day. Have
+                questions or need support?
+                Reach out anytime—your feedback helps us improve. Together, let’s keep the conversation going.</p>
+            <div class="text-2xl space-x-10">
+                <i class="fa-brands fa-twitter hover:cursor-pointer"></i>
+                <i class="fa-brands fa-facebook-f hover:cursor-pointer"></i>
+                <i class="fa-brands fa-instagram hover:cursor-pointer"></i>
+                <i class="fa-brands fa-github hover:cursor-pointer"></i>
+            </div>
+            <div class="border-[1px] mb-8 mt-8"></div>
+            <p>&copy; 2024, All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <!-- script file -->
     <script src="js/nexus-forum.js"></script>
