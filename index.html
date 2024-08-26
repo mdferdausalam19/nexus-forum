@@ -51,22 +51,22 @@
                     <div class=" hidden lg:flex">
                         <ul class="menu menu-horizontal space-x-2 px-1">
                             <li>
-                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full hover:">
+                                <a href="" title="Home" class="border border-[rgba(3,7,18,0.10)] rounded-full hover:">
                                     <img src="images/house.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                <a href="" title="Create Post" class="border border-[rgba(3,7,18,0.10)] rounded-full">
                                     <img src="images/pen.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                <a href="" title="Invite" class="border border-[rgba(3,7,18,0.10)] rounded-full">
                                     <img src="images/user-add.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="border border-[rgba(3,7,18,0.10)] rounded-full">
+                                <a href="" title="Flagged Posts" class="border border-[rgba(3,7,18,0.10)] rounded-full">
                                     <img src="images/flag.png" alt="">
                                 </a>
                             </li>
@@ -128,14 +128,19 @@
                     discussions come alive.
                     Let’s make every conversation count.</p>
             </div>
+            <!-- loading spinner -->
+             <div id="loading-spinner-one" class="text-center">
+                <span class="loading loading-spinner text-primary loading-lg bg-[#797DFC]"></span>
+             </div>
             <!-- discussion and mark as read card container -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <!-- discussion container -->
                 <div id="discussion-container" class="col-span-2 space-y-5">
                     <!--  -->
                 </div>
+                
                 <!-- mark as read container -->
-                <div class="col-span-1 rounded-3xl bg-[rgba(18,19,45,0.05)] p-5">
+                <div id="mark-as-read-container" class="col-span-1 rounded-3xl bg-[rgba(18,19,45,0.05)] p-5  hidden">
                     <div class="flex justify-between items-center mb-4">
                         <div>
                             <h4 class="#12132D text-xl font-bold">Title</h4>
@@ -174,6 +179,10 @@
                 <p class="text-[rgba(18,19,45,0.60)] md:text-lg">Stay updated with the freshest discussions! Check out
                     the latest posts from our community and dive into trending topics.
                     Don’t miss out on what’s new—your next great conversation starts here.</p>
+            </div>
+            <!-- loading spinner -->
+            <div id="loading-spinner-two" class="text-center">
+                <span class="loading loading-spinner text-primary loading-lg bg-[#797DFC]"></span>
             </div>
             <!-- latest posts card container -->
             <div class="flex  flex-col items-center justify-center sm:flex-wrap lg:flex-nowrap lg:flex-row  gap-6 "

@@ -44,7 +44,7 @@ const discussionContainerCard = async (categoryName) => {
                             <div class="border-dashed border-[rgba(18,19,45,0.25)] border-b-2 mb-5"></div>
                             <div class="flex justify-between items-center">
                                 <div
-                                    class="flex justify-center items-center flex-col md:flex-row space-x-6 text-[rgba(18,19,45,0.80)]">
+                                    class="flex justify-center items-center flex-wrap space-x-4 text-[rgba(18,19,45,0.80)]">
                                     <div class="flex items-center gap-2">
                                         <img src="images/tabler-icon-message.png" alt="">
                                         <p>${card.comment_count}</p>
@@ -74,7 +74,6 @@ const discussionContainerCard = async (categoryName) => {
     discussionContainer.appendChild(discussionCard);
   });
 };
-discussionContainerCard();
 
 // latest posts section functionality
 const latestPostsContainerCard = async () => {
@@ -130,18 +129,18 @@ const latestPostsContainerCard = async () => {
     latestPostsContainer.appendChild(latestPostsCardDiv);
   });
 };
-latestPostsContainerCard();
 
-// search functionality
-const searchInputField = document.getElementById("search-input-field");
-function searchPost() {
-  const searchInputFieldValue = searchInputField.value;
-  if (searchInputFieldValue) {
-    discussionContainerCard(searchInputFieldValue);
-  } else {
-    alert("Please enter a valid category name");
-  }
-}
+// loading spinner functionality
+const loadingSpinnerOne = document.getElementById("loading-spinner-one");
+const loadingSpinnerTwo = document.getElementById("loading-spinner-two");
+const spinnerOne = setInterval(() => {
+  loadingSpinnerOne.classList.add("hidden");
+  loadingSpinnerTwo.classList.add("hidden");
+  clearInterval(spinnerOne);
+  discussionContainerCard();
+  latestPostsContainerCard();
+  document.getElementById("mark-as-read-container").classList.remove("hidden");
+}, 2000);
 
 // mark as read functionality
 let count = 0;
@@ -161,4 +160,16 @@ function markAsRead(cardTitle, cardViewCount) {
   markCardContainer.appendChild(markCardDiv);
   count++;
   document.getElementById("mark-as-read-count").innerText = count;
+}
+
+// search functionality
+const searchInputField = document.getElementById("search-input-field");
+function searchPost() {
+  const searchInputFieldValue = searchInputField.value;
+  if (searchInputFieldValue) {
+    discussionContainerCard(searchInputFieldValue);
+    searchInputField.innerText = "";
+  } else {
+    alert("Please enter a valid category name!");
+  }
 }
